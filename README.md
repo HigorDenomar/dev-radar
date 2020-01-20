@@ -1,7 +1,8 @@
+<h1 align="center">
+DevRadar 
+</h1>
 
-# <p style="text-align: center;"> DevRadar </p>
-
-## <p style="text-align: center;">Projeto realizado durante a Semana OmniStack #10 </p>
+<h2 align="center">Projeto realizado durante a Semana OmniStack #10 </h2>
 
 ### O projeto proposto pelo pessoal da <a href="https://github.com/rocketseat">@Rocketseat</a> foi dividido em 3 etapas:
 
@@ -22,9 +23,9 @@ ___
 
 ![Print da tela do Dev Radar Web](source/img/dev-radar-web.jpg "DevRadar Web")
 
-___
 
 ![Print da tela do Dev Radar Mobile](source/img/dev-radar-mobile.jpg "Mapa de Devs - DevRadar Mobile") 
+
 
 ---
 <br/>&nbsp;
