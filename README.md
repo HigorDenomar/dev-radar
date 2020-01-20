@@ -6,9 +6,10 @@ DevRadar
 
 <br/>&nbsp;
 
-<h2 align="center">
+<h2>
 O projeto proposto pelo pessoal da <a href="https://github.com/rocketseat">@Rocketseat</a> foi dividido em 3 etapas:
 </h2>
+<br/>
 
 > **1. Backend** </br> <br/>
 Para o backend foi construída uma API RESTful com Node.js. <br/>&nbsp;
