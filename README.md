@@ -1,10 +1,14 @@
-<h1 align="center">
+<h2 align="center">
 DevRadar 
-</h1>
+</h2>
 
-<h2 align="center">Projeto realizado durante a Semana OmniStack #10 </h2>
+<h3 align="center">Projeto realizado durante a Semana OmniStack #10 </h3>
 
-### O projeto proposto pelo pessoal da <a href="https://github.com/rocketseat">@Rocketseat</a> foi dividido em 3 etapas:
+<br/>&nbsp;
+
+<div align="center">
+O projeto proposto pelo pessoal da <a href="https://github.com/rocketseat">@Rocketseat</a> foi dividido em 3 etapas:
+</div>
 
 > **1. Backend** </br> <br/>
 Para o backend foi construída uma API RESTful com Node.js. <br/>&nbsp;
