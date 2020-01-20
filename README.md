@@ -20,11 +20,11 @@ ___
 - # **Prints Screen:**
 
 
-![Print da tela do Dev Radar Web](img/dev-radar-web.jpg "DevRadar Web")
+![Print da tela do Dev Radar Web](source/img/dev-radar-web.jpg "DevRadar Web")
 
 ___
 
-![Print da tela do Dev Radar Mobile](img/dev-radar-mobile.jpg "Mapa de Devs - DevRadar Mobile") 
+![Print da tela do Dev Radar Mobile](source/img/dev-radar-mobile.jpg "Mapa de Devs - DevRadar Mobile") 
 
 ---
 <br/>&nbsp;
