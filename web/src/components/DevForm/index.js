@@ -48,7 +48,7 @@ function DevForm({onSubmit}) {
               id="github_username"
               required
               value={github_username}
-              onChange={e => {setGithubUsername(e.target.value) }}
+              onChange={e => setGithubUsername(e.target.value) }
             />
           </div>
 
@@ -59,9 +59,9 @@ function DevForm({onSubmit}) {
               id="techs"
               required
               value={techs}
-              onChange={e => {
-                setTechs(e.target.value);
-              }}
+              onChange={e => 
+                setTechs(e.target.value)
+              }
             />
           </div>
 
@@ -73,9 +73,9 @@ function DevForm({onSubmit}) {
                 name="latitude"
                 id="latitude"
                 required value = {latitude}
-                onChange= {e => {
-                  setLatitude(e.target.value);
-                }}
+                onChange= {e => 
+                  setLatitude(e.target.value)
+                }
               />
             </div>
 
@@ -86,9 +86,9 @@ function DevForm({onSubmit}) {
                 name="longitude"
                 id="longitude"
                 required value={longitude}
-                onChange = {e => {
-                  setLongitude(e.target.value);
-                }}
+                onChange = {e => 
+                  setLongitude(e.target.value)
+                }
               />
             </div>
           </div>

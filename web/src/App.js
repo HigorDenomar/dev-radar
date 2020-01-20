@@ -22,23 +22,11 @@ function App() {
     }
     loadDev();
   }, []);
-  
-/*
-  useEffect(() => {
-    const loadDevs = async () => {
-      const response = await api.get("/devs");
-      setDevs(response.data);
-    };
-
-    loadDevs();
-  }, []);*/
 
 
   async function handleAddDev(data) {
 
-    const response = await api.post("/devs", {data});
-
-    console.log(response.data);
+    const response = await api.post("/devs", data);
 
     setDevs([...devs, response.data]);
   }

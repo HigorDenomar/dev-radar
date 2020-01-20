@@ -11,7 +11,7 @@ module.exports = {
     },
 
     async store (request, response) {
-        const { github_username, techs, latidude, longitude } = request.body;
+        const { github_username, techs, latitude, longitude } = request.body;
 
         let dev = await Dev.findOne({ github_username });
 
@@ -24,7 +24,7 @@ module.exports = {
         
             const location = {
                 type: 'Point',
-                coordinates: [longitude, latidude],
+                coordinates: [longitude, latitude],
             };
         
             dev = await Dev.create({
@@ -40,12 +40,10 @@ module.exports = {
             // e que o novo dev tenha pelo menos uma das tecnologias filtradas
 
             const sendSocketMessageTo = findConnections(
-                { latidude, longitude },
+                { latitude, longitude },
                 techsArray,
             );
-
-            console.log(sendSocketMessageTo);
-
+            
             sendMessage(sendSocketMessageTo, 'new-dev', dev);
         }
     
