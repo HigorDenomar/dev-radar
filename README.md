@@ -44,6 +44,7 @@ ___
 
 * Cadastrar novos desenvolvedores pelo site;
 * Listar todos os desenvolvedores pelo site;
+* Remover desenvolvedores pelo site;
 
 ### Techs
 
