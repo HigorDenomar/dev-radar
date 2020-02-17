@@ -50,3 +50,32 @@ li.dev-item a {
 li.dev-item a:hover {
     color: #5a2ea6;
 }
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#infos {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons {
+    height: 50px;
+    align-items: center;
+    
+}
+
+.icons i {
+    color: #8e4dff;
+    transition: 0.2s;
+}
+
+
+.icons i:hover {
+    color: #ff5959;
+    cursor: pointer;
+    transition: 0.2s;
+}

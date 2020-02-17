@@ -10,6 +10,17 @@ module.exports = {
         return response.json(devs);
     },
 
+    async destroy(request, response) {
+        const _id = request.params._id;
+    
+        const dev = await Dev.findById(_id);
+    
+        if (dev != null) {
+          await Dev.deleteOne({ _id });
+          return response.json({ message: "Successful" });
+        }
+    },
+
     async store (request, response) {
         const { github_username, techs, latitude, longitude } = request.body;
 
