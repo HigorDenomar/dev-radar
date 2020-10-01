@@ -1,3 +1,7 @@
+/*
+  Calculo para descobrir a distância entre dois pontos a partir da latidude e longitude de cada um (fórmula de haversine)
+*/
+
 function deg2rad(deg) {
     return deg * (Math.PI / 180);
 }

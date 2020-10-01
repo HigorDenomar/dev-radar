@@ -53,6 +53,7 @@ function Main({ navigation }) {
     subscribleToNewDevs(dev => setDevs([...devs, dev]));
   })
 
+  // Enviando os dados de pesquisa com websocket pro backend.
   function setupWebsocket() {
     disconnect();
 
