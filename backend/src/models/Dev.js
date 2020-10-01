@@ -1,3 +1,7 @@
+/*
+    Definindo e exportando o schema de um desenvolvedo
+*/
+
 const mongoose = require('mongoose');
 const PointSchema = require('./utils/PointSchema')
 

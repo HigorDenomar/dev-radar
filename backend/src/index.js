@@ -10,6 +10,7 @@ const server = http.Server(app);
 
 setupWebsocket(server);
 
+// criando a conexão com o banco
 mongoose.connect('mongodb+srv://higordenomar:higordenomar@cluster0.btf32.mongodb.net/<dbname>?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -17,6 +18,8 @@ mongoose.connect('mongodb+srv://higordenomar:higordenomar@cluster0.btf32.mongodb
 
 app.use(cors());
 app.use(express.json());
+
+// utilizando as rotas do arquivo ./routes.js
 app.use(routes);
 
 server.listen(3333);
