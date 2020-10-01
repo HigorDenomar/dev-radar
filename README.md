@@ -26,10 +26,10 @@ ___
 - # **Prints Screen:**
 
 
-![Print da tela do Dev Radar Web](source/img/dev-radar-web.jpg "DevRadar Web")
+![Print da tela do Dev Radar Web](.github/dev-radar-web.jpg "DevRadar Web")
 
 
- <img src="source/img/dev-radar-mobile.jpg" width="421"> &nbsp; &nbsp; &nbsp; <img src="source/img/dev-radar-mobile-git.jpg" width="421">
+ <img src=".github/dev-radar-mobile.jpg" width="421"> &nbsp; &nbsp; &nbsp; <img src=".github/dev-radar-mobile-git.jpg" width="421">
 
 
 ---
