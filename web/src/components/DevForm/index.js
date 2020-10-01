@@ -6,6 +6,7 @@ function DevForm({onSubmit}) {
     const [latitude, setLatitude] = useState('');
     const [longitude, setLongitude] = useState('');
 
+    // Pega a latitude e longitude do usuário no navegador
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(
           (position) => {
@@ -23,6 +24,7 @@ function DevForm({onSubmit}) {
         );
     }, []);
 
+    // Envia os dados do formulário para a função handleAddDev no App.js.
     async function handleSubmit(e) {
         e.preventDefault();
 
@@ -33,12 +35,11 @@ function DevForm({onSubmit}) {
           longitude,
         });
 
-        console.log(techs);
-
         setGithubUsername('');
         setTechs('');
     }
 
+    // Render do formulário em tela:
     return (
         <form onSubmit={handleSubmit}>
           <div className="input-block">
