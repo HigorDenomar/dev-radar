@@ -7,11 +7,13 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+
 import MapView, { Marker, Callout } from 'react-native-maps';
 import {
   requestPermissionsAsync,
   getCurrentPositionAsync,
 } from 'expo-location';
+
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '../services/api';
@@ -23,10 +25,11 @@ function Main({ navigation }) {
 
   const [techs, setTechs] = useState('');
 
+  // Ao iniciar a aplicação, pede permissão de acesso a localização do dispositivo e seta a localização em currentRegion.
   useEffect(() => {
     async function loadInitialPosition() {
       const { granted } = await requestPermissionsAsync();
-
+      
       if (granted) {
         const { coords } = await getCurrentPositionAsync({
           enableHighAccuracy: true,
@@ -50,6 +53,7 @@ function Main({ navigation }) {
     subscribleToNewDevs(dev => setDevs([...devs, dev]));
   })
 
+  // Enviando os dados de pesquisa com websocket pro backend.
   function setupWebsocket() {
     disconnect();
 
@@ -61,6 +65,7 @@ function Main({ navigation }) {
     );
   }
 
+  // Busca os Devs próximos que utilizam as tecnologias pesquisadas.
   async function loadDevs() {
     const { latitude, longitude } = currentRegion;
 
@@ -76,16 +81,19 @@ function Main({ navigation }) {
     setupWebsocket();
   }
 
+  // Atualiza a localização do usuário.
   function handleRegionChenged(region) {
     setCurrentRegion(region);
   }
 
+  // Não renderiza a tela caso o usuário não dê acesso a sua localização.
   if (!currentRegion) {
     return null;
   }
 
   return (
     <>
+      {/* Renderiza um mapa em tela, com a posição do usuário e de outros Devs (caso tenha algum cadastrado com as techs buscadas) */}
       <MapView
         onRegionChangeComplete={handleRegionChenged}
         initialRegion={currentRegion}
@@ -114,7 +122,8 @@ function Main({ navigation }) {
           </Marker>
         ))}
       </MapView>
-
+      
+      {/* Renderiza um input para buscar as tecnologias. */}
       <View style={styles.searchForm}>
         <TextInput
           style={styles.searchInput}
@@ -133,6 +142,7 @@ function Main({ navigation }) {
   );
 }
 
+// Estilização dos elementos.
 const styles = StyleSheet.create({
   map: {
     flex: 1,

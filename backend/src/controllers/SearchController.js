@@ -2,6 +2,10 @@ const Dev = require('../models/Dev');
 const parseStringAsArray = require('../Utils/parseStringAsArray');
 
 module.exports = {
+    /*
+        Busca Devs por tecnologias (é precisso ter pelo menos uma das tecnologias pesquisadas), e que estejam em no máximo 10km de distância de quem está realizando a pesquisa.
+    */
+
     async index(request, response) {
         const { latitude, longitude, techs} = request.query;
 

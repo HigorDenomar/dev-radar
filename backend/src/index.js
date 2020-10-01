@@ -10,13 +10,16 @@ const server = http.Server(app);
 
 setupWebsocket(server);
 
-mongoose.connect('mongodb+srv://Higor:authdbdevradar@cluster0-sjbio.mongodb.net/week10?retryWrites=true&w=majority', {
+// criando a conexão com o banco
+mongoose.connect('mongodb+srv://higordenomar:higordenomar@cluster0.btf32.mongodb.net/<dbname>?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
 app.use(cors());
 app.use(express.json());
+
+// utilizando as rotas do arquivo ./routes.js
 app.use(routes);
 
 server.listen(3333);

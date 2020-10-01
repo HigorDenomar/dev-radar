@@ -5,6 +5,8 @@ import Main from './pages/Main';
 import Profile from './pages/Profile';
 
 const Routes = createAppContainer (
+
+  // Criando as rotas de Main e Profile.
   createStackNavigator({
     Main: {
       screen: Main,
@@ -21,6 +23,8 @@ const Routes = createAppContainer (
       }
     },
   }, {
+
+    // Setando configurações globais para as rotas.
     defaultNavigationOptions: {
       headerBackTitleVisible: false,
       headerTintColor: '#fff',

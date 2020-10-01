@@ -1,3 +1,7 @@
+/*
+    Configurações de WebSocket pra enviar novos Devs pros clientes em tempo real (caso o novo Dev atenda aos requisitos de pesquisa que o client estiver realizando no momento).
+*/
+
 const socketio = require('socket.io');
 const parseStringAsArray = require('./Utils/parseStringAsArray');
 const calculateDistance = require('./Utils/calculateDistance');
